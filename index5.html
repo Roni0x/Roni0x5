@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор стоимости заказа - Лабораторная работа 5</title>
+    <link rel="stylesheet" href="style5.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Калькулятор стоимости заказа</h1>
+        
+        <form id="calculatorForm">
+            <div class="form-group">
+                <label for="product">Выберите товар:</label>
+                <select id="product" name="product" required>
+                    <option value="">-- Выберите товар --</option>
+                    <optgroup label="Ноутбуки">
+                        <option value="89990">Apple MacBook Air M3 - 89 990 руб</option>
+                        <option value="54990">Lenovo ThinkPad X1 - 54 990 руб</option>
+                        <option value="42990">ASUS ZenBook 14 - 42 990 руб</option>
+                        <option value="32990">HP Pavilion 15 - 32 990 руб</option>
+                    </optgroup>
+                    <optgroup label="Смартфоны">
+                        <option value="99990">iPhone 15 Pro - 99 990 руб</option>
+                        <option value="89990">Samsung Galaxy S24 - 89 990 руб</option>
+                        <option value="49990">Google Pixel 8 - 49 990 руб</option>
+                        <option value="34990">Xiaomi 14 - 34 990 руб</option>
+                        <option value="19990">Realme 11 Pro - 19 990 руб</option>
+                    </optgroup>
+                    <optgroup label="Наушники">
+                        <option value="29990">Sony WH-1000XM5 - 29 990 руб</option>
+                        <option value="24990">Apple AirPods Pro 2 - 24 990 руб</option>
+                        <option value="15990">Samsung Galaxy Buds2 Pro - 15 990 руб</option>
+                        <option value="8990">JBL Tune 770NC - 8 990 руб</option>
+                        <option value="3990">Xiaomi Redmi Buds 4 - 3 990 руб</option>
+                    </optgroup>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="quantity">Количество:</label>
+                <input type="text" id="quantity" name="quantity" 
+                       placeholder="Введите количество" required
+                       pattern="[1-9][0-9]*">
+                <div class="error-message" id="quantityError"></div>
+            </div>
+            
+            <button type="submit" class="calculate-btn">Рассчитать стоимость</button>
+        </form>
+        
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="calculator.js" defer></script>
+</body>
+</html>
