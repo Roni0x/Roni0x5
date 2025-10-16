@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultDiv = document.getElementById('result');
     const productSelect = document.getElementById('product');
     
-    // Регулярное выражение для проверки ввода (только цифры, начинается не с 0)
+    
     const quantityRegex = /^[1-9][0-9]*$/;
     
     function validateQuantity() {
@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
         resultDiv.className = 'result success';
     }
     
-    // Обработчики событий
+    
     quantityInput.addEventListener('input', validateQuantity);
     
     form.addEventListener('submit', function(event) {
@@ -72,4 +72,5 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Инициализация
     quantityError.textContent = '';
+
 });
