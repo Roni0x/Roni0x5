@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const resultDiv = document.getElementById('result');
     const productSelect = document.getElementById('product');
     
-    
+   
     const quantityRegex = /^[1-9][0-9]*$/;
     
     function validateQuantity() {
@@ -70,8 +70,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Инициализация
     quantityError.textContent = '';
-
 });
-
